@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>What I Do - Mulweli Ramukhadi - Lady In Tech</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial; color: #222; line-height: 1.6; background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 30%, #ffdde1 60%, #ff8fb3 100%); background-size: 300% 300%; animation: moveBg 12s ease infinite; }
+@keyframes moveBg { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+a { text-decoration: none; }
+.topbar { background: #111; color: white; text-align: center; padding: 8px; font-size: 14px; }
+.topbar span { color: #ff8fb3; font-weight: bold; }
+.nav { background: rgba(255,255,255,0.9); display: flex; justify-content: space-between; align-items: center; padding: 18px 40px; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 100; }
+.logo { font-size: 22px; font-weight: bold; color: #111; }
+.logo span { color: #d63384; }
+.nav-links a { color: #333; font-weight: bold; margin-left: 25px; font-size: 16px; }
+.nav-links a.active { color: #d63384; border-bottom: 3px solid #d63384; padding-bottom: 5px; }
+.hero { padding: 50px 30px 20px 30px; text-align: center; }
+.hero-inner { background: linear-gradient(135deg, #1a0a14 0%, #3b0a2a 35%, #d63384 70%, #ff6b9d 100%); max-width: 800px; margin: auto; padding: 40px 30px; border-radius: 25px; box-shadow: 0 20px 50px rgba(0,0,0,0.35); text-align: center; }
+.hero h1 { font-size: 42px; color: white; }
+.hero h2 { color: #ffdde1; letter-spacing: 2px; font-size: 18px; margin: 10px 0 20px 0; }
+.hero p { max-width: 650px; margin: auto; font-size: 18px; color: white; }
+.rotating { color: #ffdde1; font-weight: bold; font-size: 19px; height: 28px; overflow: hidden; margin: 20px 0; white-space: nowrap; }
+.rotating span { display: block; height: 28px; line-height: 28px; animation: rotateWords 10s infinite; }
+@keyframes rotateWords {
+  0%, 18% { transform: translateY(0); }
+  20%, 38% { transform: translateY(-28px); }
+  40%, 58% { transform: translateY(-56px); }
+  60%, 78% { transform: translateY(-84px); }
+  80%, 98% { transform: translateY(-112px); }
+  100% { transform: translateY(-140px); }
+}
+.btn { display: inline-block; background: white; color: #d63384; padding: 14px 30px; border-radius: 30px; font-weight: bold; font-size: 17px; margin: 10px 5px; box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
+.btn2 { background: #ffdde1; color: #3b0a2a; }
+.section { padding: 30px; max-width: 800px; margin: 20px auto; text-align: center; }
+.box { background: linear-gradient(135deg, #1a0a14 0%, #3b0a2a 35%, #d63384 70%, #ff6b9d 100%); padding: 30px 20px; border-radius: 25px; margin: 20px 0; box-shadow: 0 20px 50px rgba(0,0,0,0.35); text-align: center; }
+.box h3 { color: white; margin: 15px 0 10px 0; font-size: 22px; }
+.box p { font-size: 18px; color: white; margin: 0; }
+.list-line { display: block; margin: 4px 0; }
+.mock { background: white; border-radius: 15px; overflow: hidden; max-width: 420px; margin: auto; text-align: left; box-shadow: 0 10px 25px rgba(0,0,0,0.3); }
+.mock-bar { background: #eee; padding: 8px 12px; font-size: 12px; color: #888; }
+.mock-bar span { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #ff5f57; margin-right: 4px; }
+.mock-bar span:nth-child(2){ background: #febc2e; } .mock-bar span:nth-child(3){ background: #28c840; }
+.mock-head { padding: 18px; text-align: center; }
+.mock-head h4 { font-size: 20px; margin-bottom: 4px; }
+.mock-head p { font-size: 13px; color: #666; margin: 0; }
+.mock-btn { display: inline-block; padding: 8px 16px; border-radius: 20px; color: white; font-weight: bold; font-size: 13px; margin-top: 10px; }
+.mock-grid { display: flex; gap: 8px; padding: 0 15px 15px 15px; }
+.mock-card { flex: 1; background: #f8f8f8; border-radius: 10px; padding: 10px; text-align: center; font-size: 12px; }
+.mock-card b { display: block; font-size: 13px; margin-bottom: 3px; }
+.mock-card img { width: 100%; height: 70px; object-fit: cover; border-radius: 8px; margin-bottom: 6px; }
+.cta-strip { background: linear-gradient(135deg, #1a0a14 0%, #3b0a2a 35%, #d63384 70%, #ff6b9d 100%); padding: 50px 30px; text-align: center; margin: 30px auto; border-radius: 25px; max-width: 800px; box-shadow: 0 20px 50px rgba(0,0,0,0.35); }
+.cta-strip h2 { color: white; font-size: 28px; margin-bottom: 10px; }
+.cta-strip p { color: #ffdde1; font-size: 18px; margin-bottom: 20px; }
+.footer { background: white; padding: 30px; text-align: center; border-top: 1px solid #eee; }
+.footer p { color: #666; font-size: 15px; margin: 4px 0; }
+.footer b { color: #111; }
+</style>
+</head>
+<body>
+
+ <div class="topbar">LIMITED SPOTS!! Your Business Needs A Website Let's Build It TODAY! <span>• Mamelodi East, Pretoria</span></div>
+
+<div class="nav">
+<div class="logo">MULWELI <span>• LADY IN TECH</span></div>
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="about.html">About Me</a>
+<a href="services.html" class="active">What I Do</a>
+</div>
+</div>
+
+<div class="hero">
+<div class="hero-inner">
+<h1>What I Do</h1>
+<h2>I HELP YOUR BUSINESS SHINE ONLINE</h2>
+<div class="rotating">
+<span>I Build Websites</span>
+<span>I Build Brands</span>
+<span>I Help Small Businesses</span>
+<span>I Make You Look Professional</span>
+<span>I Bring Your Dream Online</span>
+<span>I Build Websites</span>
+</div>
+<p>Do you have a business but no website? Customers can't find you? Don't worry  <b>I got you!</b></p>
+</div>
+</div>
+
+<div class="section">
+
+<!-- 1. BUSINESS WEBSITES -->
+<div class="box">
+<div class="mock">
+<div class="mock-bar"><span></span><span></span><span></span> &nbsp; www.beautybykeamo.co.za</div>
+<div class="mock-head" style="background:#fff0f5;">
+<h4 style="color:#d63384;">Beauty By Keamo - Salon</h4>
+<p>Mamelodi East • Hair • Nails • Lashes</p>
+<div class="mock-btn" style="background:#d63384;">Book Now</div>
+</div>
+<div class="mock-grid">
+<div class="mock-card"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=400&q=80"><b>Salon</b>Hair R250<br>Book</div>
+<div class="mock-card"><img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400&q=80"><b>Nail Tech</b>Nails R180<br>Book</div>
+<div class="mock-card"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&q=80"><b>Catering</b>Platters<br>Order</div>
+</div>
+</div>
+<h3>1. Business Websites</h3>
+<p>For:
+<span class="list-line">Salons</span>
+<span class="list-line">Shops</span>
+<span class="list-line">Caterers</span>
+<span class="list-line">Tutors</span>
+<span class="list-line">Nail Techs</span>
+</p>
+</div>
+
+<!-- 2. PERSONAL PAGES & CVs -->
+<div class="box">
+<div class="mock">
+<div class="mock-bar"><span></span><span></span><span></span> &nbsp; www.thando-cv.co.za</div>
+<div class="mock-head" style="background:#f3e8ff;">
+<h4 style="color:#6b21a8;">Thando M. - Professional CV</h4>
+<p>Admin Assistant • Mamelodi • Available Now</p>
+<div class="mock-btn" style="background:#6b21a8;">Download My CV</div>
+</div>
+<div class="mock-grid">
+<div class="mock-card"><b>About Me</b>Hardworking<br>2 Years Experience</div>
+<div class="mock-card"><b>Skills</b>Computer<br>Customer Care</div>
+<div class="mock-card"><b>Contact</b>WhatsApp<br>Email Me</div>
+</div>
+</div>
+<h3>2. Personal Pages & CVs</h3>
+<p>Want to look professional?
+<span class="list-line">I make a page that shows who you are.</span>
+<span class="list-line">What you do.</span>
+<span class="list-line">And why people should choose YOU.</span>
+</p>
+</div>
+
+<!-- 3. IT SUPPORT -->
+<div class="box">
+<div class="mock">
+<div class="mock-bar"><span></span><span></span><span></span> &nbsp; www.mulweli-help.co.za</div>
+<div class="mock-head" style="background:#e0f2fe;">
+<h4 style="color:#0369a1;">Need IT Help? I Got You!</h4>
+<p>Laptop Slow? Email Not Working? Phone Setup?</p>
+<div class="mock-btn" style="background:#0369a1;">Chat On WhatsApp</div>
+</div>
+<div class="mock-grid">
+<div class="mock-card"><b>Laptop</b>Setup & Fix</div>
+<div class="mock-card"><b>Email</b>Setup</div>
+<div class="mock-card"><b>Phone</b>Setup</div>
+</div>
+</div>
+<h3>3. IT Support & Help</h3>
+<p>Struggling with your:
+<span class="list-line">Laptop?</span>
+<span class="list-line">Email?</span>
+<span class="list-line">Phone?</span>
+<span class="list-line">I help with setup. basic problems and advice.</span>
+<span class="list-line">In simple language.</span>
+<span class="list-line">No confusing tech talk.</span>
+</p>
+</div>
+
+<div class="box">
+<h3>Why Choose Me?</h3>
+<p>Because I care. I listen. I make it simple. And I make it BEAUTIFUL  just like you deserve.</p>
+</div>
+</div>
+
+<div class="cta-strip">
+<h2>Ready To Go Online?</h2>
+<p>Phone: 076 024 0707<br>Email: mulweliramukhadi@gmail.com</p>
+<a href="index.html" class="btn">Back Home</a>
+<a href="about.html" class="btn btn2">About Me</a>
+</div>
+
+<div class="footer">
+<p><b>Mulweli Ramukhadi - Lady In Tech</b></p>
+<p>Mamelodi East, Pretoria</p>
+<p>
+<a href="tel:0760240707" style="color:#111; font-weight:bold;">Call Me</a> | 
+<a href="https://wa.me/2760240707" style="color:#25D366; font-weight:bold;">WhatsApp</a> | 
+<a href="mailto:mulweliramukhadi@gmail.com?subject=I%20Want%20A%20Website&body=Hi%20Mulweli,%20I%20saw%20your%20website%20and%20I%20want%20one%20for%20my%20business." style="color:#d63384; font-weight:bold;">Email Me</a>
+</p>
+</div>
+
+<a href="https://wa.me/2760240707?text=Hi%20Mulweli,%20I%20saw%20your%20website%20and%20I%20want%20a%20website%20for%20my%20business" style="position:fixed; bottom:20px; right:20px; background:#25D366; color:white; padding:14px 20px; border-radius:50px; font-weight:bold; font-size:16px; box-shadow:0 5px 20px rgba(0,0,0,0.3); z-index:1000;">Chat on WhatsApp</a>
+
+<a href="tel:0760240707" style="position:fixed; bottom:20px; left:20px; background:#111; color:white; padding:14px 20px; border-radius:50px; font-weight:bold; font-size:16px; box-shadow:0 5px 20px rgba(0,0,0,0.3); z-index:1000;">Call Me</a>
+
+</body>
+</html>
