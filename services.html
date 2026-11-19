@@ -36,6 +36,13 @@ a { text-decoration: none; }
 .box h3 { color: white; margin: 15px 0 10px 0; font-size: 22px; }
 .box p { font-size: 18px; color: white; margin: 0; }
 .list-line { display: block; margin: 4px 0; }
+.video-wrap { background: white; border-radius: 15px; overflow: hidden; max-width: 420px; margin: auto; box-shadow: 0 10px 25px rgba(0,0,0,0.3); position: relative; }
+.video-wrap video { width: 100%; height: 240px; object-fit: cover; display: block; }
+.video-label { background: #111; color: white; font-size: 12px; padding: 8px 12px; text-align: left; }
+.video-label span { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #ff5f57; margin-right: 4px; }
+.video-label span:nth-child(2){ background: #febc2e; } .video-label span:nth-child(3){ background: #28c840; }
+.sound-btn { position: absolute; top: 40px; right: 12px; background: #d63384; color: white; border: none; padding: 10px 16px; border-radius: 25px; font-weight: bold; font-size: 14px; cursor: pointer; box-shadow: 0 5px 15px rgba(0,0,0,0.3); z-index: 10; }
+.sound-btn.off { background: #111; }
 .mock { background: white; border-radius: 15px; overflow: hidden; max-width: 420px; margin: auto; text-align: left; box-shadow: 0 10px 25px rgba(0,0,0,0.3); }
 .mock-bar { background: #eee; padding: 8px 12px; font-size: 12px; color: #888; }
 .mock-bar span { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #ff5f57; margin-right: 4px; }
@@ -47,7 +54,6 @@ a { text-decoration: none; }
 .mock-grid { display: flex; gap: 8px; padding: 0 15px 15px 15px; }
 .mock-card { flex: 1; background: #f8f8f8; border-radius: 10px; padding: 10px; text-align: center; font-size: 12px; }
 .mock-card b { display: block; font-size: 13px; margin-bottom: 3px; }
-.mock-card img { width: 100%; height: 70px; object-fit: cover; border-radius: 8px; margin-bottom: 6px; }
 .cta-strip { background: linear-gradient(135deg, #1a0a14 0%, #3b0a2a 35%, #d63384 70%, #ff6b9d 100%); padding: 50px 30px; text-align: center; margin: 30px auto; border-radius: 25px; max-width: 800px; box-shadow: 0 20px 50px rgba(0,0,0,0.35); }
 .cta-strip h2 { color: white; font-size: 28px; margin-bottom: 10px; }
 .cta-strip p { color: #ffdde1; font-size: 18px; margin-bottom: 20px; }
@@ -58,7 +64,27 @@ a { text-decoration: none; }
 </head>
 <body>
 
- <div class="topbar">LIMITED SPOTS!! Your Business Needs A Website Let's Build It TODAY! <span>• Mamelodi East, Pretoria</span></div>
+<!-- SOUND - TYPING + SOFT MUSIC TOGETHER -->
+<audio id="typingSound" loop preload="auto"><source src="https://cdn.pixabay.com/audio/2022/03/10/audio_2c8c7b3a9d.mp3" type="audio/mpeg"></audio>
+<audio id="softMusic" loop preload="auto"><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3" type="audio/mpeg"></audio>
+<script>
+let soundOn = false;
+function toggleSound(){
+  const typing = document.getElementById('typingSound');
+  const music = document.getElementById('softMusic');
+  typing.volume = 0.8;
+  music.volume = 0.25;
+  if(!soundOn){
+    typing.play(); music.play(); soundOn = true;
+    document.querySelectorAll('.sound-btn').forEach(b=>{ b.textContent='🔇 Mute Sound'; b.classList.remove('off'); });
+  } else {
+    typing.pause(); music.pause(); soundOn = false;
+    document.querySelectorAll('.sound-btn').forEach(b=>{ b.textContent='🔊 Tap For Sound'; b.classList.add('off'); });
+  }
+}
+</script>
+
+<div class="topbar">LIMITED SPOTS!! Your Business Needs A Website Let's Build It TODAY! <span>• Mamelodi East, Pretoria</span></div>
 
 <div class="nav">
 <div class="logo">MULWELI <span>• LADY IN TECH</span></div>
@@ -89,17 +115,19 @@ a { text-decoration: none; }
 
 <!-- 1. BUSINESS WEBSITES -->
 <div class="box">
-<div class="mock">
-<div class="mock-bar"><span></span><span></span><span></span> &nbsp; www.beautybykeamo.co.za</div>
+<div class="video-wrap">
+<div class="video-label"><span></span><span></span><span></span> &nbsp; www.beautybykeamo.co.za - Watch Me Build It</div>
+<button class="sound-btn off" onclick="toggleSound()">🔊 Tap For Sound</button>
+<video autoplay muted loop playsinline preload="auto" poster="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80">
+<source src="https://videos.pexels.com/video-files/3129671/3129671-hd_1920_1080_30fps.mp4" type="video/mp4">
+<source src="https://videos.pexels.com/video-files/3205624/3205624-hd_1920_1080_25fps.mp4" type="video/mp4">
+</video>
+</div>
+<div class="mock" style="margin-top:12px;">
 <div class="mock-head" style="background:#fff0f5;">
 <h4 style="color:#d63384;">Beauty By Keamo - Salon</h4>
 <p>Mamelodi East • Hair • Nails • Lashes</p>
 <div class="mock-btn" style="background:#d63384;">Book Now</div>
-</div>
-<div class="mock-grid">
-<div class="mock-card"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=400&q=80"><b>Salon</b>Hair R250<br>Book</div>
-<div class="mock-card"><img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400&q=80"><b>Nail Tech</b>Nails R180<br>Book</div>
-<div class="mock-card"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&q=80"><b>Catering</b>Platters<br>Order</div>
 </div>
 </div>
 <h3>1. Business Websites</h3>
@@ -114,8 +142,15 @@ a { text-decoration: none; }
 
 <!-- 2. PERSONAL PAGES & CVs -->
 <div class="box">
-<div class="mock">
-<div class="mock-bar"><span></span><span></span><span></span> &nbsp; www.thando-cv.co.za</div>
+<div class="video-wrap">
+<div class="video-label"><span></span><span></span><span></span> &nbsp; www.thando-cv.co.za - Watch Me Build Your CV</div>
+<button class="sound-btn off" onclick="toggleSound()">🔊 Tap For Sound</button>
+<video autoplay muted loop playsinline preload="auto" poster="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&q=80">
+<source src="https://videos.pexels.com/video-files/3205624/3205624-hd_1920_1080_25fps.mp4" type="video/mp4">
+<source src="https://videos.pexels.com/video-files/3129671/3129671-hd_1920_1080_30fps.mp4" type="video/mp4">
+</video>
+</div>
+<div class="mock" style="margin-top:12px;">
 <div class="mock-head" style="background:#f3e8ff;">
 <h4 style="color:#6b21a8;">Thando M. - Professional CV</h4>
 <p>Admin Assistant • Mamelodi • Available Now</p>
@@ -137,8 +172,15 @@ a { text-decoration: none; }
 
 <!-- 3. IT SUPPORT -->
 <div class="box">
-<div class="mock">
-<div class="mock-bar"><span></span><span></span><span></span> &nbsp; www.mulweli-help.co.za</div>
+<div class="video-wrap">
+<div class="video-label"><span></span><span></span><span></span> &nbsp; www.mulweli-help.co.za - I Help You Live</div>
+<button class="sound-btn off" onclick="toggleSound()">🔊 Tap For Sound</button>
+<video autoplay muted loop playsinline preload="auto" poster="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80">
+<source src="https://videos.pexels.com/video-files/4492242/4492242-hd_1920_1080_25fps.mp4" type="video/mp4">
+<source src="https://videos.pexels.com/video-files/3129671/3129671-hd_1920_1080_30fps.mp4" type="video/mp4">
+</video>
+</div>
+<div class="mock" style="margin-top:12px;">
 <div class="mock-head" style="background:#e0f2fe;">
 <h4 style="color:#0369a1;">Need IT Help? I Got You!</h4>
 <p>Laptop Slow? Email Not Working? Phone Setup?</p>
