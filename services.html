@@ -29,8 +29,10 @@ a { text-decoration: none; }
 .box h3 { color: white; margin: 15px 0 10px 0; font-size: 22px; }
 .box p { font-size: 18px; color: white; margin: 0; }
 .list-line { display: block; margin: 4px 0; }
-.video-wrap { background: #000; border-radius: 15px; overflow: hidden; max-width: 420px; margin: auto; box-shadow: 0 10px 25px rgba(0,0,0,0.3); }
-.video-wrap video { width: 100%; height: 240px; object-fit: cover; display: block; }
+.pic-wrap { border-radius: 15px; overflow: hidden; max-width: 420px; margin: auto; box-shadow: 0 10px 25px rgba(0,0,0,0.3); display: flex; }
+.pic-wrap img { width: 50%; height: 240px; object-fit: cover; display: block; }
+.pic-wrap-single img { width: 100%; height: 240px; object-fit: cover; display: block; }
+.pic-wrap-single { border-radius: 15px; overflow: hidden; max-width: 420px; margin: auto; box-shadow: 0 10px 25px rgba(0,0,0,0.3); }
 .cta-strip { background: linear-gradient(135deg, #1a0a14 0%, #3b0a2a 35%, #d63384 70%, #ff6b9d 100%); padding: 50px 30px; text-align: center; margin: 30px auto; border-radius: 25px; max-width: 800px; box-shadow: 0 20px 50px rgba(0,0,0,0.35); }
 .cta-strip h2 { color: white; font-size: 28px; margin-bottom: 10px; }
 .cta-strip p { color: #ffdde1; font-size: 18px; margin-bottom: 20px; }
@@ -70,12 +72,11 @@ a { text-decoration: none; }
 
 <div class="section">
 
-<!-- VIDEO 1 - ONLY VIDEO, NO WORDS ON VIDEO -->
+<!-- 1. PEXELS ONLY - TWO SIDES: LADY CODING + WEBSITE -->
 <div class="box">
-<div class="video-wrap">
-<video autoplay muted loop playsinline preload="auto">
-<source src="https://videos.pexels.com/video-files/4465196/4465196-hd_1920_1080_25fps.mp4" type="video/mp4">
-</video>
+<div class="pic-wrap">
+<img src="https://images.pexels.com/photos/1181359/pexels-photo-1181359.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Lady coding">
+<img src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Website">
 </div>
 <h3>1. Business Websites</h3>
 <p>For:
@@ -87,13 +88,9 @@ a { text-decoration: none; }
 </p>
 </div>
 
-<!-- VIDEO 2 - ONLY VIDEO, NO WORDS ON VIDEO -->
+<!-- 2. PEXELS ONLY - CV -->
 <div class="box">
-<div class="video-wrap">
-<video autoplay muted loop playsinline preload="auto">
-<source src="https://videos.pexels.com/video-files/4112424/4112424-hd_1920_1080_25fps.mp4" type="video/mp4">
-</video>
-</div>
+<div class="pic-wrap-single"><img src="https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&w=800" alt="CV"></div>
 <h3>2. Personal Pages & CVs</h3>
 <p>Want to look professional?
 <span class="list-line">I make a page that shows who you are.</span>
@@ -102,12 +99,11 @@ a { text-decoration: none; }
 </p>
 </div>
 
-<!-- VIDEO 3 - ONLY VIDEO, NO WORDS ON VIDEO -->
+<!-- 3. PEXELS ONLY - TWO SIDES: LADY SMILING + GUY FRUSTRATED -->
 <div class="box">
-<div class="video-wrap">
-<video autoplay muted loop playsinline preload="auto">
-<source src="https://videos.pexels.com/video-files/4347362/4347362-hd_1920_1080_25fps.mp4" type="video/mp4">
-</video>
+<div class="pic-wrap">
+<img src="https://images.pexels.com/photos/7709027/pexels-photo-7709027.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Lady smiling helping">
+<img src="https://images.pexels.com/photos/4009592/pexels-photo-4009592.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Guy frustrated laptop">
 </div>
 <h3>3. IT Support & Help</h3>
 <p>Struggling with your:
