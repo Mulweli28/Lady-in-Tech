@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,7 +22,14 @@ a { text-decoration: none; }
 .hero p { max-width: 650px; margin: auto; font-size: 18px; color: white; }
 .rotating { color: #ffdde1; font-weight: bold; font-size: 19px; height: 28px; overflow: hidden; margin: 20px 0; white-space: nowrap; }
 .rotating span { display: block; height: 28px; line-height: 28px; animation: rotateWords 10s infinite; }
-@keyframes rotateWords { 0%, 18% { transform: translateY(0); } 20%, 38% { transform: translateY(-28px); } 40%, 58% { transform: translateY(-56px); } 60%, 78% { transform: translateY(-84px); } 80%, 98% { transform: translateY(-112px); } 100% { transform: translateY(-140px); } }
+@keyframes rotateWords {
+  0%, 18% { transform: translateY(0); }
+  20%, 38% { transform: translateY(-28px); }
+  40%, 58% { transform: translateY(-56px); }
+  60%, 78% { transform: translateY(-84px); }
+  80%, 98% { transform: translateY(-112px); }
+  100% { transform: translateY(-140px); }
+}
 .btn { display: inline-block; background: white; color: #d63384; padding: 14px 30px; border-radius: 30px; font-weight: bold; font-size: 17px; margin: 10px 5px; box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
 .btn2 { background: #ffdde1; color: #3b0a2a; }
 .section { padding: 30px; max-width: 800px; margin: 20px auto; text-align: center; }
@@ -29,10 +37,18 @@ a { text-decoration: none; }
 .box h3 { color: white; margin: 15px 0 10px 0; font-size: 22px; }
 .box p { font-size: 18px; color: white; margin: 0; }
 .list-line { display: block; margin: 4px 0; }
-.pic-wrap { border-radius: 15px; overflow: hidden; max-width: 420px; margin: auto; box-shadow: 0 10px 25px rgba(0,0,0,0.3); display: flex; }
-.pic-wrap img { width: 50%; height: 240px; object-fit: cover; display: block; }
-.pic-wrap-single img { width: 100%; height: 240px; object-fit: cover; display: block; }
-.pic-wrap-single { border-radius: 15px; overflow: hidden; max-width: 420px; margin: auto; box-shadow: 0 10px 25px rgba(0,0,0,0.3); }
+.mock { background: white; border-radius: 15px; overflow: hidden; max-width: 420px; margin: auto; text-align: left; box-shadow: 0 10px 25px rgba(0,0,0,0.3); }
+.mock-bar { background: #eee; padding: 8px 12px; font-size: 12px; color: #888; }
+.mock-bar span { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #ff5f57; margin-right: 4px; }
+.mock-bar span:nth-child(2){ background: #febc2e; } .mock-bar span:nth-child(3){ background: #28c840; }
+.mock-head { padding: 18px; text-align: center; }
+.mock-head h4 { font-size: 20px; margin-bottom: 4px; }
+.mock-head p { font-size: 13px; color: #666; margin: 0; }
+.mock-btn { display: inline-block; padding: 8px 16px; border-radius: 20px; color: white; font-weight: bold; font-size: 13px; margin-top: 10px; }
+.mock-grid { display: flex; gap: 8px; padding: 0 15px 15px 15px; }
+.mock-card { flex: 1; background: #f8f8f8; border-radius: 10px; padding: 10px; text-align: center; font-size: 12px; }
+.mock-card b { display: block; font-size: 13px; margin-bottom: 3px; }
+.mock-card img { width: 100%; height: 70px; object-fit: cover; border-radius: 8px; margin-bottom: 6px; }
 .cta-strip { background: linear-gradient(135deg, #1a0a14 0%, #3b0a2a 35%, #d63384 70%, #ff6b9d 100%); padding: 50px 30px; text-align: center; margin: 30px auto; border-radius: 25px; max-width: 800px; box-shadow: 0 20px 50px rgba(0,0,0,0.35); }
 .cta-strip h2 { color: white; font-size: 28px; margin-bottom: 10px; }
 .cta-strip p { color: #ffdde1; font-size: 18px; margin-bottom: 20px; }
@@ -43,7 +59,7 @@ a { text-decoration: none; }
 </head>
 <body>
 
-<div class="topbar">LIMITED SPOTS!! Your Business Needs A Website Let's Build It TODAY! <span>• Mamelodi East, Pretoria</span></div>
+ <div class="topbar">LIMITED SPOTS!! Your Business Needs A Website Let's Build It TODAY! <span>• Mamelodi East, Pretoria</span></div>
 
 <div class="nav">
 <div class="logo">MULWELI <span>• LADY IN TECH</span></div>
@@ -66,16 +82,26 @@ a { text-decoration: none; }
 <span>I Bring Your Dream Online</span>
 <span>I Build Websites</span>
 </div>
-<p>Do you have a business but no website? Customers can't find you? Don't worry <b>I got you!</b></p>
+<p>Do you have a business but no website? Customers can't find you? Don't worry  <b>I got you!</b></p>
 </div>
 </div>
 
 <div class="section">
 
-<!-- 1. BUSINESS WEBSITES - ONE PICTURE -->
+<!-- 1. BUSINESS WEBSITES -->
 <div class="box">
-<div class="pic-wrap-single">
-<img src="https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Lady coding and developing websites">
+<div class="mock">
+<div class="mock-bar"><span></span><span></span><span></span> &nbsp; www.beautybykeamo.co.za</div>
+<div class="mock-head" style="background:#fff0f5;">
+<h4 style="color:#d63384;">Beauty By Keamo - Salon</h4>
+<p>Mamelodi East • Hair • Nails • Lashes</p>
+<div class="mock-btn" style="background:#d63384;">Book Now</div>
+</div>
+<div class="mock-grid">
+<div class="mock-card"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=400&q=80"><b>Salon</b>Hair R250<br>Book</div>
+<div class="mock-card"><img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400&q=80"><b>Nail Tech</b>Nails R180<br>Book</div>
+<div class="mock-card"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&q=80"><b>Catering</b>Platters<br>Order</div>
+</div>
 </div>
 <h3>1. Business Websites</h3>
 <p>For:
@@ -87,10 +113,20 @@ a { text-decoration: none; }
 </p>
 </div>
 
-<!-- 2. CV CREATION - ONE PICTURE -->
+<!-- 2. PERSONAL PAGES & CVs -->
 <div class="box">
-<div class="pic-wrap-single">
-<img src="https://images.pexels.com/photos/7112/pexels-photo-7112.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Lady creating a professional CV on her laptop">
+<div class="mock">
+<div class="mock-bar"><span></span><span></span><span></span> &nbsp; www.thando-cv.co.za</div>
+<div class="mock-head" style="background:#f3e8ff;">
+<h4 style="color:#6b21a8;">Thando M. - Professional CV</h4>
+<p>Admin Assistant • Mamelodi • Available Now</p>
+<div class="mock-btn" style="background:#6b21a8;">Download My CV</div>
+</div>
+<div class="mock-grid">
+<div class="mock-card"><b>About Me</b>Hardworking<br>2 Years Experience</div>
+<div class="mock-card"><b>Skills</b>Computer<br>Customer Care</div>
+<div class="mock-card"><b>Contact</b>WhatsApp<br>Email Me</div>
+</div>
 </div>
 <h3>2. Personal Pages & CVs</h3>
 <p>Want to look professional?
@@ -100,17 +136,27 @@ a { text-decoration: none; }
 </p>
 </div>
 
-<!-- 3. IT SUPPORT - ONE PICTURE -->
+<!-- 3. IT SUPPORT -->
 <div class="box">
-<div class="pic-wrap-single">
-<img src="https://images.pexels.com/photos/7709252/pexels-photo-7709252.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Lady providing remote IT support from home">
+<div class="mock">
+<div class="mock-bar"><span></span><span></span><span></span> &nbsp; www.mulweli-help.co.za</div>
+<div class="mock-head" style="background:#e0f2fe;">
+<h4 style="color:#0369a1;">Need IT Help? I Got You!</h4>
+<p>Laptop Slow? Email Not Working? Phone Setup?</p>
+<div class="mock-btn" style="background:#0369a1;">Chat On WhatsApp</div>
+</div>
+<div class="mock-grid">
+<div class="mock-card"><b>Laptop</b>Setup & Fix</div>
+<div class="mock-card"><b>Email</b>Setup</div>
+<div class="mock-card"><b>Phone</b>Setup</div>
+</div>
 </div>
 <h3>3. IT Support & Help</h3>
 <p>Struggling with your:
 <span class="list-line">Laptop?</span>
 <span class="list-line">Email?</span>
 <span class="list-line">Phone?</span>
-<span class="list-line">I help with setup, basic problems and advice.</span>
+<span class="list-line">I help with setup. basic problems and advice.</span>
 <span class="list-line">In simple language.</span>
 <span class="list-line">No confusing tech talk.</span>
 </p>
@@ -118,7 +164,7 @@ a { text-decoration: none; }
 
 <div class="box">
 <h3>Why Choose Me?</h3>
-<p>Because I care. I listen. I make it simple. And I make it BEAUTIFUL just like you deserve.</p>
+<p>Because I care. I listen. I make it simple. And I make it BEAUTIFUL  just like you deserve.</p>
 </div>
 </div>
 
@@ -133,8 +179,8 @@ a { text-decoration: none; }
 <p><b>Mulweli Ramukhadi - Lady In Tech</b></p>
 <p>Mamelodi East, Pretoria</p>
 <p>
-<a href="tel:0760240707" style="color:#111; font-weight:bold;">Call Me</a> |
-<a href="https://wa.me/2760240707" style="color:#25D366; font-weight:bold;">WhatsApp</a> |
+<a href="tel:0760240707" style="color:#111; font-weight:bold;">Call Me</a> | 
+<a href="https://wa.me/2760240707" style="color:#25D366; font-weight:bold;">WhatsApp</a> | 
 <a href="mailto:mulweliramukhadi@gmail.com?subject=I%20Want%20A%20Website&body=Hi%20Mulweli,%20I%20saw%20your%20website%20and%20I%20want%20one%20for%20my%20business." style="color:#d63384; font-weight:bold;">Email Me</a>
 </p>
 </div>
